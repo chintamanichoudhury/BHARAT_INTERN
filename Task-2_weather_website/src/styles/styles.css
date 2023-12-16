@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+    background:url(/public/images/R.jpeg);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    width: 500px;
+    min-width: auto;
+    max-width: auto;
+    background-image: linear-gradient(180deg,aqua, rgb(101, 101, 238) 20%,rgb(39, 150, 235) 80%);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .search input[type="text"] {
+    overflow: hidden;
+    min-width: auto;
+    padding: 10px;
+    outline: none;
+    background: rgb(255, 255, 255);
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+    max-width: max-content;
+  }
+  input::placeholder {
+    color: rgb(80, 79, 79);
+    font-size: 1rem;
+  }
+  .search button {
+    cursor: pointer;
+    background-color: #fff;
+    width: 60px;
+    height: 40px;
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 0px 15px 15px 0px;
+  }
+  .error {
+    text-align: left;
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+    color: red;
+  }
+  .weather {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  .weather img {
+    width: 200px;
+  }
+  .weather h1 {
+    font-size: 2.5rem;
+    color: azure;
+  }
+  .weather h2 {
+    font-size: 2rem;
+    color: rgb(255, 242, 0);
+  }
+  .weather_forecast {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 1rem;
+  }
+  .weather__card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgb(223, 215, 206);
+    border: 1px solid rgb(83, 82, 82);
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .weather__card i {
+    font-size: 1.5rem;
+  }
+  .fa-temperature-full{
+    color: rgb(255, 132, 0);
+  }
+  .fa-droplet{
+    color: rgb(90, 198, 235);
+  }
+  .fa-wind{
+    color:rgb(73, 117, 229);
+  }
+  .fa-gauge-high{
+    color: rgb(124, 44, 204);
+  }
+  @media (max-width: 768px) {
+    .card{
+      width: 300px;
+      
+    }
+    .search input[type="text"] {
+      max-width: 80%;
+    }
+    .weather{
+      margin-bottom: 1.5rem;
+    }
+    .weather img {
+      width: 150px;
+    
+    }
+    .weather h1 {
+      font-size: 2rem;
+    }
+    .weather h2 {
+      font-size: 1.5rem;
+    }
+    .weather_forecast {
+      display: grid;
+      grid-template-columns: repeat(2, 1.5fr);
+      grid-gap: 0.6rem;
+      justify-content: center;
+    }
+    .weather__card {
+      gap: 0.5rem;
+      padding: 10px;
+    }
+    .weather__card i {
+      font-size: 1.3rem;
+    }
+  }
